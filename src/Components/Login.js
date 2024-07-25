@@ -49,7 +49,6 @@ const Login = () => {
                   photoURL: photoURL,
                 })
               );
-              navigate("./Browse");
             })
             .catch((error) => {
               seterrormessage(error.message);
@@ -69,7 +68,6 @@ const Login = () => {
       )
         .then((userCredential) => {
           const user = userCredential.user;
-          navigate("./Browse");
         })
         .catch((error) => {
           const errorCode = error.code;
